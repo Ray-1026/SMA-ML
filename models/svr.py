@@ -1,15 +1,7 @@
 import numpy as np
 from sklearn.model_selection import KFold
 from sklearn.svm import SVR
-
-
-class SVREnsemble:
-    def __init__(self, models):
-        self.models = models
-
-    def predict(self, X):
-        predictions = [model.predict(X) for model in self.models]
-        return sum(predictions) / len(self.models)
+from models.ensemble import EnsembleModel
 
 
 class SVR_Model:
@@ -44,7 +36,7 @@ class SVR_Model:
         self.train_loss /= 5
         self.test_loss /= 5
 
-        self.ensemble_model = SVREnsemble(self.models)
+        self.ensemble_model = EnsembleModel(self.models)
 
     def predict(self, X, models):
         y_pred = None
