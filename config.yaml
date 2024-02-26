@@ -1,0 +1,27 @@
+B19:
+  name: "B19'"
+  train: True # True, False
+  train_dataset: "datasets/B19' dataset.csv"
+  eval: True # True, False
+  eval_dataset: "datasets/B19' dataset.csv"
+  eval_output: "B19'.csv"
+  parms: ["a", "b", "c", "beta"]
+  model_types: ["gradient_boost", "gradient_boost", "gradient_boost", "gradient_boost"] # "regression", "random_forest", "gradient_boost"
+  # parms: ["beta"]
+  # model_types: ["gradient_boost"] # "regression", "random_forest", "gradient_boost"
+  
+
+B2:
+  name: "B2"
+  train: True
+  train_dataset: "datasets/B2 dataset.csv"
+  eval: True
+  eval_dataset: "datasets/B2 dataset.csv"
+  eval_output: "B2.csv"
+  parms: ["a"]
+  model_types: ["regression"] # "regression", "random_forest"
+
+feature: ["en_p", "ea", "valence", "pettifor", "rad_ionic", "rad_slater", "rad_clementi", "?H", "?S", "size_diff", "T"]
+# feature: ["en_p", "ea", "valence", "pettifor", "rad_ionic", "rad_slater", "rad_clementi", "?H", "?S", "size_diff", "rad_Waber", "atom_number", "atom_mass", "T"]
+# feature: ['en_p', 'valence', 'rad_slater', 'rad_clementi', '?H']
+# feature: ['Ni', 'Ti', 'Hf', 'Co', 'Cu', 'Zr', 'Fe', 'T']
